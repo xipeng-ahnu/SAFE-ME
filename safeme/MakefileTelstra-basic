@@ -1,0 +1,4 @@
+BMV2_SWITCH_EXE = simple_switch_grpc
+TOPO = Telstra-topo/runtime-basic/topology.json
+
+include ../utils/MakefileBasic

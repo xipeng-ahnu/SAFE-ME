@@ -1,0 +1,422 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Administrator.FTIGJBLBH9Q8TYF\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.22\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="experiment-enviroment-for-implementing-and-testing-safe-me-scheme-with-p4-software-switches">Experiment Enviroment For Implementing and Testing SAFE-ME Scheme with P4 Software Switches</h1>
+
+<h2 class="mume-header" id="1-introduction">1. Introduction</h2>
+
+<p><strong>This repository stores <a href="https://p4.org/">P4</a> based implementation of SAFE-ME scheme and a reproducible experiment environment constructed on P4 supported <a href="http://mininet.org/">Mininet</a>.</strong></p>
+<p>The SAFE-ME scheme is a <strong>Service Function Chaining Routing scheme</strong> support policy enforcement. It is first proposed in our ICNP&apos;19 work: <a href="https://ieeexplore.ieee.org/document/8888123">SAFE-ME paper</a> . It is flexible and scalable for SDN-based middle-box networks.</p>
+<p>At the beginning, SAFE-ME was implemented in an OpenFlow-based SDN data plane with the help of MPLS header. Later, we received valuable suggestions that P4 based data plane will be more suitable for SAFE-ME. Thus, we augment the SAFE-ME design with P4 and perform experiment in our lab with physical servers. The outcomes prove that:</p>
+<ol>
+<li>
+<p>SAFE-ME can conveniently settled down into P4 based data plane and the correctness is ensured.</p>
+</li>
+<li>
+<p>By testing and comparing the performance of SAFE-ME with other two schemes: PDA and SIMPLE in the Telstra topology, the results are very similar with our ICNP&apos;19 work, which proves the sounding performance of SAFE-ME.</p>
+</li>
+</ol>
+<p><strong>Here, we want to give special thanks to the reviewers who shepherd us to P4.</strong></p>
+<h2 class="mume-header" id="2-p4-implementation-details">2. P4 Implementation Details</h2>
+
+<h3 class="mume-header" id="21-forwaring-pipelines">2.1 Forwaring pipelines:</h3>
+
+<p>According to our paper, the SAFE-ME scheme use two different forwarding pipeline:</p>
+<h4 class="mume-header" id="a-basic-forwarding-pipeline">A) Basic forwarding pipeline:</h4>
+
+<p>Use traditional IPv4 forwarding for packets which are no need to go through middle-boxes(NFs),<br>
+the switch must perform the following actions for every packet:<br>
+(i) update the source and destination MAC addresses,<br>
+(ii) decrement the time-to-live (TTL) in the IP header, and<br>
+(iii) forward the packet out the appropriate port.<br>
+This type of pipeline only need an ip based matching table.</p>
+<h4 class="mume-header" id="b-service-function-chainingsfc-forwarding-pipeline">B) Service Function Chaining(SFC) forwarding pipeline:</h4>
+
+<p>First, we introduced a <strong>new SAFE-ME header</strong></p>
+<pre data-role="codeBlock" data-info class="language-"><code>header safeme_t{
+    bit&lt;32&gt; tagStorageField; // store the unprocessed NF tags
+    bit&lt;8&gt; tagMatchField;    // store the current NF to be processed
+    bit&lt;16&gt; preservedEtherType;  // store the Ether Type from the upper layer header
+}
+</code></pre><p>The SAFE-ME header is added in between ethernet header and ipv4 header. <strong>A packet equipped with a SAFE-ME header will have a ethernet header with the etherType field set to a fixed experimental value: &quot;<em>0x0123</em>&quot;.</strong></p>
+<p><strong>The new 16 bits header field &quot;<em>preservedEtherType</em>&quot; is used to preserve the packet&apos;s original etherType value from the ethernet header.</strong></p>
+<h3 class="mume-header" id="22-safe-me-p4-matching-tables">2.2 SAFE-ME P4 Matching Tables:</h3>
+
+<p>To implement SAFE-ME scheme, two matching tables are needed and introduced in our paper:</p>
+<h4 class="mume-header" id="a-safeme_sfc-table">A) &quot;<em>safeme_sfc</em>&quot; Table:</h4>
+
+<p>When a packet is sent from a host to the ingress switch, it check this table to determine whether this packet needs to go through a SFC or not. If the packet needs to do so, the following actions will be taken sequencially:<br>
+<strong>Step 1.</strong> filled the &quot;tagStorageField&quot; and &quot;tagMatchField&quot; in a new SAFE-ME header.<br>
+<strong>Step 2.</strong> copy the packet&apos;s original etherType value to &quot;preservedEtherType&quot; field.<br>
+<strong>Step 3.</strong> set the ethernet header field etherType with value &quot;<em>0x0123</em>&quot; and make the SAFE-ME header &quot;<em>valid</em>&quot;.</p>
+<p>The <em>safeme_sfc</em> table is defined as below:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>table safeme_sfc {
+       key = {
+           hdr.ipv4.srcAddr: lpm;
+           hdr.ipv4.dstAddr: exact;
+       }
+       actions = {
+           safeme_addtag;
+           myNoAction;
+       }
+       size = 4096;
+       default_action = myNoAction();
+   }
+</code></pre><h4 class="mume-header" id="b-safeme_nf-table">B) &quot;<em>safeme_nf</em>&quot; Table:</h4>
+
+<p>After a packet went over the <em>safeme_sfc</em> table, if the packet has a SAFE-ME header, it will go to match <em>safeme_nf</em> table.</p>
+<p>The <em>safeme_nf</em> table is defined as below:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>table safeme_nf {
+       key = {
+           hdr.safeme.tagMatchField: exact;
+           hdr.ipv4.dstAddr: lpm;
+       }
+       actions = {
+           safeme_shift_forward;
+           safeme_normal_forward;
+           safeme_removetag;
+           myNoAction;
+           drop;
+       }
+       size = 1024;
+       default_action = drop();
+}
+</code></pre><p>this table look up the tagMatchField to match the next NF and select an action in below:<br>
+<strong>- &quot;<em>safeme_normal_forward</em>&quot; Action:</strong> the packet is going to the next NF and current switch is not the one closest to it, we only need to forward it through certain port.</p>
+<p><strong>- &quot;<em>safeme_shift_forward</em>&quot; Action:</strong> the packet is going to the next NF and current switch is the closest one, we shift the tag as our paper described for matching the next NF.<br>
+The tag shifting operation codes are as below:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>hdr.safeme.tagMatchField = (bit&lt;8&gt;)(hdr.safeme.tagStorageField);
+hdr.safeme.tagStorageField = hdr.safeme.tagStorageField &gt;&gt; 8;
+</code></pre><p>Then, the switch sends it to the NF directly connected to it.</p>
+<p><strong>- &quot;<em>safeme_removetag</em>&quot; Action:</strong> the packet is now at the egress switch closest to the destination host, we will first recover the etherType field in the ethernet header from the preservedEtherType field in the SAFE-ME header, then we will remove the SAFE-ME header in order to make the packet be the same as the source host sends. At last, we send it to the destination host.</p>
+<h2 class="mume-header" id="3-running-the-experiment">3. Running the experiment:</h2>
+
+<p>In our lab, we use several servers and high-end workstations to build the experiment enviroment:</p>
+<ul>
+<li>We run each P4 software switch on a Ubuntu 16.04 server with Xeon Gold 6152 processor and 128GB of RAM, as 8 servers in total.</li>
+<li>Each NF is installed on a high-end workstation with Intel Core i9-10900 processor and 64GB of RAM, as 9 workstations in total.</li>
+<li>Each host with Intel Core i5-10400 processor and 16GB of RAM, as 16 PCs in total.</li>
+<li>A controller is deployed with a Ubuntu 16.04 server with Xeon Gold 6152 processor and 128GB of RAM, using gRPC protocol to send flow entries and control the data plane.</li>
+</ul>
+<p>To help anyone interests with SAFE-ME and wants to reproduce our experiment, here we consolidate all the hardware and softwares into a Mininet implementation with the same SAFE-ME design and the same network topology - <em>Telstra</em> showed in our paper. We also implemented PDA and SIMPLE here, too. The flow entries sent by the controller had been written into files for pre-installing into the switches when they are at initialization process. Thus, the controller is omitted for simplicity.</p>
+<p>** Please follow the steps here to run the expermiment network and do any test you want:**</p>
+<h3 class="mume-header" id="31-p4-enviroment-and-dependencies-installing">3.1  P4 Enviroment and Dependencies Installing:</h3>
+
+<p>Install P4 enviroment follow the <a href="https://github.com/jafingerhut/p4-guide/bin/install-p4dev-v2.sh">install-p4dev-v2.sh</a> script in <a href="https://github.com/jafingerhut/p4-guide">P4-GUIDE</a> in Ubuntu16.04.7 or Ubuntu18.04.</p>
+<p>You will need to install <a href="https://github.com/p4lang/behavioral-model">bmv2</a>, <a href="https://github.com/p4lang/p4c">p4c</a>, <a href="https://github.com/google/protobuf">protobuf</a>, <a href="https://github.com/google/grpc">grpc</a> and <a href="https://github.com/p4lang/p4runtime">p4runtime</a>. Specially, when you are installing <em>bmv2</em>, make sure to configure and install <font color="#dd0000"><em>simple_switch_grpc</em></font> in the sub directory <a href="https://github.com/p4lang/behavioral-model/targets/simple_switch_grpc/">./targets/simple_switch_grpc/</a>.</p>
+<h3 class="mume-header" id="32-install-mininet">3.2 Install Mininet</h3>
+
+<p>Please follow the guide from <a href="https://mininet.org/">mininet.org</a> to install Mininet 2.3.0.</p>
+<h3 class="mume-header" id="33-create-and-run-the-experiment-network-based-on-telstra-topology-with-safe-me-or-other-benchmarks">3.3 Create and run the experiment network based on <em>Telstra</em> topology with SAFE-ME or other benchmarks</h3>
+
+<h4 class="mume-header" id="step-1-git-clone-this-repository">Step 1: Git clone this repository</h4>
+
+<p>Use <em><strong>git clone</strong></em> command to pull all the content of this repository to your PC or Laptop, with a certain directory, here we call it {YOUR GIT DIR}.</p>
+<h4 class="mume-header" id="step-2-build-the-network">Step 2: Build the Network</h4>
+
+<p>In your Ubuntu shell command prompt, enter the directory &quot;{YOUR GIT DIR}/safemeSim/safeme/&quot;. <strong>Then you choose one of the shell commands below to run one scheme among SAFE-ME, PDA or SIMPLE:</strong></p>
+<p><em><strong>make run</strong></em></p>
+<p>This will run the whole Telstra topology in mininet with SAFE-ME scheme enabled.</p>
+<p><em><strong>make -f MakefileTelstra-PDA run</strong></em></p>
+<p>This will run the whole Telstra topology in mininet with PDA scheme enabled.</p>
+<p><em><strong>make -f MakefileTelstra-simple run</strong></em></p>
+<p>This will run the whole Telstra topology in mininet with SIMPLE scheme enabled.</p>
+<h4 class="mume-header" id="step-3-do-tests-or-experiments">Step 3: Do tests or experiments</h4>
+
+<p>After one of the above command, you will find a mininet shell running.</p>
+<p>Then you can use &quot;<em><strong>xterm h11</strong></em>&quot; or &quot;<em><strong>xterm h82</strong></em>&quot; to open new terminals with certain host. This will open one or several new command prompts.</p>
+<p>In the new command prompt, you can use testing tools like <a href="https://github.com/netoptimizer/network-testing/pktgen/">pktGen</a>, <a href="https://iperf.fr/">iperf3</a>, <a href="https://pkgs.org/download/qperf">Qperf</a> and so on to do any test your want.</p>
+<p>Here, each switch is connected to 2 hosts.<br>
+<em>S1</em> is connected with <em>h11</em> and <em>h12</em>.<br>
+<em>S2</em> is connected with <em>h21</em> and <em>h22</em>.<br>
+......<br>
+<em>S8</em> is connected with <em>h81</em> and <em>h82</em>.</p>
+<h4 class="mume-header" id="step-4-stop-and-clean-up">Step 4: Stop and Clean up</h4>
+
+<p>After the experiment, use the shell command below to stop the experiment:</p>
+<p><em><strong>make stop</strong></em></p>
+<p>Use the shell command below to stop the experiment and clean up the generated files:</p>
+<p><em><strong>make clean</strong></em></p>
+<h2 class="mume-header" id="4-licenses-and-credits">4. Licenses and Credits</h2>
+
+<h3 class="mume-header" id="41-licenses">4.1 Licenses</h3>
+
+<p>Our programs and codes obeys the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License Version 2.0</a>.</p>
+<h3 class="mume-header" id="42-credits">4.2 Credits</h3>
+
+<p>The SAFE-ME scheme and programs are developed by <strong>Intelligent Network and System Research Group</strong> of Suzhou Institute for Advanced Study, University of Science and Technology of China, Suzhou, Jiangsu, China, 215123.</p>
+<p><strong>Thanks to use our P4-based SAFE-ME scheme and the experiment code!</strong></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

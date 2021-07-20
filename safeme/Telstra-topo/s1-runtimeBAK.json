@@ -1,0 +1,107 @@
+{
+  "target": "bmv2",
+  "p4info": "build/safeme.p4.p4info.txt",
+  "bmv2_json": "build/safeme.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.safeme_sfc",
+      "default_action": true,
+      "action_name": "MyIngress.myNoAction",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.safeme_nf",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.ipv4_lpm",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.safeme_sfc",
+      "match": {
+        "hdr.ipv4.srcAddr": "10.0.1.1",
+        "hdr.ipv4.dstAddr": ["10.0.2.0", 24]
+      },
+      "action_name": "MyIngress.safeme_addtag",
+      "action_params": {
+        "sTag": 2,
+        "mTag": 1
+      }
+    },
+    {
+      "table": "MyIngress.safeme_nf",
+      "match": {
+        "hdr.safeme.tagMatchField": 1,
+        "hdr.ipv4.dstAddr": ["10.0.0.0", 8]
+      },
+      "action_name": "MyIngress.safeme_shift_forward",
+      "action_params": {
+        "dstAddr": "08:00:00:00:03:00",
+        "port": 3
+      }
+    },
+    {
+      "table": "MyIngress.safeme_nf",
+      "match": {
+        "hdr.safeme.tagMatchField": 2,
+        "hdr.ipv4.dstAddr": ["10.0.0.0", 8]
+      },
+      "action_name": "MyIngress.safeme_normal_forward",
+      "action_params": {
+        "dstAddr": "08:00:00:00:02:00",
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.safeme_nf",
+      "match": {
+        "hdr.safeme.tagMatchField": 0,
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "MyIngress.safeme_removetag",
+      "action_params": {
+        "dstAddr": "08:00:00:00:01:11",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.safeme_nf",
+      "match": {
+        "hdr.safeme.tagMatchField": 0,
+        "hdr.ipv4.dstAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "MyIngress.safeme_normal_forward",
+      "action_params": {
+        "dstAddr": "08:00:00:00:02:00",
+        "port": 2
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_lpm",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "MyIngress.ipv4_forward",
+      "action_params": {
+        "dstAddr": "08:00:00:00:01:11",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.ipv4_lpm",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "MyIngress.ipv4_forward",
+      "action_params": {
+        "dstAddr": "08:00:00:00:02:00",
+        "port": 2
+      }
+    }
+  ]
+}
